@@ -9,7 +9,7 @@
 {% for dep in department %}
     <h3>{{ dep.name }}</h3>
     {% for stu in dep.student_set.all %}
-    <a href="/student/{{ stu.id }}">{{ stu.name }}</a>
+    <a href="{% url 'student:student' stu.id %}">{{ stu.name }}</a>
 {% endfor %}
 {% endfor %}
 </body>
